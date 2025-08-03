@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(#e25a5a,#5cea5c,#5d5de1);
+            box-sizing: border-box;
+        }
+
+        .container{
+            border: 1px solid black;
+            padding:0px 50px 0px 50px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 1px 10px 1px gray;
+        }
+
+        .input-wrapper , .input-wrapper1 {
+            position: relative;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .input-wrapper::before {
+            content: "🏋️‍♀️";
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+        }
+
+        .input-wrapper1::before {
+            content: "Ⓜ️";
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+        }
+
+        .input-wrapper input{
+            padding-left: 30px;
+            height: 30px;
+            font-size: 16px;
+            border: 1px dashed black;
+            background: transparent; 
+        }
+        .input-wrapper1 input{
+            padding-left: 30px;
+            height: 30px;
+            font-size: 16px;
+            border: 1px dashed black;
+            background: transparent; 
+        }
+
+        .button button{
+            border: 2px solid black;
+            background: transparent;
+            padding: 5px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        h2 , p{
+            margin-bottom: 0px;
+        }
+
+        .guide {
+            font-weight: 600;
+        }
+
+        h3{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form action="" class="form">
+        <div class="input-wrapper"> 
+            <input type="text" placeholder="Enter your weight in kg">
+        </div> 
+        <div class="input-wrapper1"> 
+            <input type="text" placeholder="Enter your Height in m">
+        </div> 
+            <div class="button">
+                <button> Calculate </button>
+            </div>
+            
+        </form>
+        <h2>BMI Health Guide</h2>
+        <p class="guide">Under Weight = Less than 18.5</p>
+        <p class="guide">Normal Weight = 18.6 - 24.9</p>
+        <p class="guide">OverWeight = 25 - 29.9</p>
+        <p class="guide">Obese = Greater than 30</p>
+        <h3 class="description"></h3>
+    </div>
+
+</body>
+</html>
