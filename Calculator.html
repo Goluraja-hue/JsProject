@@ -5,47 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
+        h1{
+            text-align: center;
+            color: chocolate;
+        }
+        .container{
+            border: 1px solid black;
+            display: block;
+        }
         tr{
             background-color: green;
             color: black;
             font-size: 30px;
+            text-align: center;
             font-weight: 700;
+        }
+        td{
+            width: 200px;
+            height: 70px;
         }
     </style>
 </head>
-<body align="center">
+<body>
+    <div class="container">
     <h1>Calculator</h1>
-    <table border="1" align="center" style="width: 400px; height: 400px;">
+    <table>
         <tr>
             <td colspan="3">
             <td>C</td>
         </tr>
-        <tr align="center">
+        <tr>
             <td>7</td>
             <td>8</td>
             <td>9</td>
             <td>❌</td>
         </tr>
-        <tr align="center">
+        <tr>
             <td>4</td>
             <td>5</td>
             <td>6</td>
             <td>➖</td>
         </tr>
-        <tr align="center">
+        <tr>
             <td>1</td>
             <td>2</td>
             <td>3</td>
             <td>➕</td>
         </tr>
-        <tr align="center">
+        <tr>
             <td>%</td>
             <td>0</td>
             <td>.</td>
             <td>=</td>
         </tr>
     </table>
-
+</div>
     
 </body>
 </html>
