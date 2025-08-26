@@ -13,36 +13,31 @@
     function randomColor(){
         let hex = "0123456789ABCDEF";
         let color = "#";
-        for (let i = 0; i<=6; i++) {
+        for (let i = 0; i<6; i++) {
             color += hex[Math.floor(Math.random()*16)];
         }
         return color;
     }
 
-let body =  document.querySelector("body");
 
-    function startRandomColor(){
     // console.log(randomColor());
-    body.style.backgroundColor = randomColor();
+    let interval;
+    function startRandomColor(){
+        interval = setInterval(changeBgColor,1000);
+        function changeBgColor(){
+            document.body.style.backgroundColor = randomColor();
+
+    }
     };
     
-    // console.log(randomColor());
-    // let interval;
-    // function startRandomColor(){
-    //     interval = setInterval(changeBgColor,1000);
-    //     function changeBgColor(){
-    //         document.body.style.backgroundColor = randomColor();
-    // }
-    // };
-    
-    // function stopRandomColor(){
-    //     clearInterval(interval);
-    //     interval = null;
-    // };
+    function stopRandomColor(){
+        clearInterval(interval);
+        interval = null;
+    };
 
 document.querySelector(".Start").addEventListener("click",startRandomColor);
 
-// document.querySelector(".Stop").addEventListener("click",stopRandomColor);
+document.querySelector(".Stop").addEventListener("click",stopRandomColor);
 </script>
 </body>
 </html>
