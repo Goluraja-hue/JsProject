@@ -10,7 +10,7 @@
     <button class="Start">Start</button>
     <button class="Stop">Stop</button>
     <script>
-    let randomColor = function(){
+    function randomColor(){
         let hex = "0123456789ABCDEF";
         let color = "#";
         for (let i = 0; i<=6; i++) {
@@ -18,23 +18,31 @@
         }
         return color;
     }
-    // console.log(randomColor());
-    let interval;
+
+let body =  document.querySelector("body");
+
     function startRandomColor(){
-        interval = setInterval(changeBgColor,1000);
-        function changeBgColor(){
-            document.body.style.backgroundColor = randomColor();
-    }
+    // console.log(randomColor());
+    body.style.backgroundColor = randomColor();
     };
     
-    function stopRandomColor(){
-        clearInterval(interval);
-        interval = null;
-    };
+    // console.log(randomColor());
+    // let interval;
+    // function startRandomColor(){
+    //     interval = setInterval(changeBgColor,1000);
+    //     function changeBgColor(){
+    //         document.body.style.backgroundColor = randomColor();
+    // }
+    // };
+    
+    // function stopRandomColor(){
+    //     clearInterval(interval);
+    //     interval = null;
+    // };
 
 document.querySelector(".Start").addEventListener("click",startRandomColor);
 
-document.querySelector(".Stop").addEventListener("click",stopRandomColor);
+// document.querySelector(".Stop").addEventListener("click",stopRandomColor);
 </script>
 </body>
 </html>
