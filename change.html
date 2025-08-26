@@ -9,8 +9,7 @@
     <h2>change page color every second</h2>
     <button class="Start">Start</button>
     <button class="Stop">Stop</button>
-</body>
-<script>
+    <script>
     let randomColor = function(){
         let hex = "0123456789ABCDEF";
         let color = "#";
@@ -19,24 +18,23 @@
         }
         return color;
     }
-    console.log(randomColor());
-
-    document.querySelector(".Start").addEventListener("click",startRandomColor());
-
-    document.querySelector(".Stop").addEventListener("click",stopRandomColor());
-
+    // console.log(randomColor());
     let interval;
     function startRandomColor(){
-    const startChangeingColor = function (){
         interval = setInterval(changeBgColor,1000);
         function changeBgColor(){
             document.body.style.backgroundColor = randomColor();
     }
-    }
-
+    };
+    
     function stopRandomColor(){
         clearInterval(interval);
         interval = null;
-    }
+    };
+
+document.querySelector(".Start").addEventListener("click",startRandomColor);
+
+document.querySelector(".Stop").addEventListener("click",stopRandomColor);
 </script>
+</body>
 </html>
